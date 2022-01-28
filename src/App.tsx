@@ -2,15 +2,21 @@ import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import './App.css'
 import MinimalMonkeys from './MinimalMonkeys'
+import WebScroll from './Webscroll'
+import { ScrollControls } from '@react-three/drei'
+import 'modern-normalize'
+import '@chris-cross-crash/ck-css'
 
 function App() {
   return (
     <div id='three-wrapper'>
-      <Canvas camera={{ fov: 55 }}>
-        <pointLight position={[10, 10, 10]} intensity={0.5} />
-        <Suspense fallback={null}>
-          <MinimalMonkeys />
-        </Suspense>
+      <Canvas camera={{ fov: 55 }} gl={{ physicallyCorrectLights: true }}>
+        <ScrollControls pages={3}>
+          <Suspense fallback={null}>
+            {/* <MinimalMonkeys /> */}
+            <WebScroll />
+          </Suspense>
+        </ScrollControls>
       </Canvas>
     </div>
   )

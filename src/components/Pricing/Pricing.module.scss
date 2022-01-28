@@ -1,0 +1,34 @@
+.base {
+  background-color: #ffffff88;
+  width: 75vw;
+  height: 80vh;
+  transform: translateX(-60%);
+  padding: 0 2rem;
+}
+
+.description {
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 50vw;
+
+  h1 {
+    margin: 0;
+    padding: 1rem;
+    font-weight: 100;
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  gap: 1rem;
+}
